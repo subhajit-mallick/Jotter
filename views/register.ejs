@@ -1,0 +1,38 @@
+<%- include('header') %>
+    <h1 class="alkatra text-light text-center m-3 mb-0" style="font-size: 3.5rem;">Jotter.</h1>
+    <h6 class="text-center text-light mb-3 alkatra">- A minimalist Todolist</h6>
+    <div class="container mb-3">
+        <div class="card crd p-5 pt-1">
+            <h1>Register</h1>
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email address</label>
+                    <input style="font-family: Arial, Helvetica, sans-serif;" type="email" class="form-control"
+                        id="emailInput" aria-describedby="emailHelp" name="username">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="passInput" class="form-label">Password</label>
+                    <input style="font-family: Arial, Helvetica, sans-serif;" type="password" class="form-control"
+                        id="passInput" name="password">
+                </div>
+                <div class="d-grid gap-2 col-3">
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+            </form>
+
+            <h3 class="hr-line"><span>OR</span></h3>
+
+            <!-- google login -->
+            <a href="/auth/google" class="google-button">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+                    alt="Google Logo">
+                <span class="sign-in-text">Sign in with Google</span>
+            </a>
+
+
+            <h4 class="mt-3" style="text-align: center;">Already have an account? <a href="/login">Login</a></h4>
+        </div>
+    </div>
+
+    <%- include('footer') %>

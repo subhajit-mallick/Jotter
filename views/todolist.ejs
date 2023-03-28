@@ -1,0 +1,47 @@
+<%- include('header') %>
+
+  <div class="heading">
+    <h1 class="alkatra text-light text-center mt-1 mb-0" style="font-size: 3rem;">Jotter.</h1>
+    <!-- <h6 class="text-center text-light mb-3 alkatra">- A minimalist Todolist</h6> -->
+  </div>
+  <h2>
+    [ <%= listTitle %> ]
+  </h2>
+
+  <div class="box">
+    <% items.forEach((item)=>{ %>
+      <form method="post" action="/chk">
+        <div class="item">
+          <input type="checkbox" name="checkbox" onChange="this.form.submit()" value="<%= item._id %>">
+          <p>
+            <%= item.text %>
+          </p>
+        </div>
+        <input type="hidden" name="listName" value="<%= listTitle %>">
+      </form>
+
+      <% }); %>
+
+        <form class="item" method="post" action="/">
+          <input name="itemText" type="text" autocomplete="off" placeholder="Add items...">
+          <button name="listName" class="btn-add" type="submit" value="<%= listTitle %>">+</button>
+        </form>
+  </div>
+
+  <details>
+    <summary>
+      info
+    </summary>
+    <p style="color: white; font-size: 1.2rem;">Use<span style="font-size: large;"> /</span>[your_prefered_listname] after the default url to get to a new custom list.
+    </p>
+  </details>
+
+  
+  <form style="text-align: center;" action="/logout" method="post">
+    <p style="color: white; font-size: 1.2rem;">Logged in as: <%= username %>
+    </p>
+    <button type="submit" class="btn btn-outline-light btn-lg">Logout</button>
+  </form>
+
+  <hr style="border-top: 3px double wheat; margin-bottom: -3%; margin-top: 3%;">
+  <%- include('footer') %>

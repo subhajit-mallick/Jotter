@@ -1,0 +1,206 @@
+html,
+body {
+  background: #23074d;
+  background: -webkit-linear-gradient(to right, #cc5333, #23074d);
+  background: linear-gradient(to right, #cc5333, #23074d);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  font-family: 'Edu NSW ACT Foundation', cursive;
+  font-size: 0.8rem;
+}
+
+.alkatra {
+  font-family: 'Alkatra', cursive;
+}
+
+h1 {
+  padding: 20px;
+  /* font-family: 'Alkatra', cursive; */
+  font-family: 'La Belle Aurore', 'cursive';
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 1.7rem;
+  color: white;
+  text-align: center;
+  margin: 5px auto 10px;
+}
+
+form {
+  font-size: large;
+}
+
+.box {
+  max-width: 400px;
+  margin: 0 auto 20px;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  background: linear-gradient(to right, #030b5a, #23074d);
+  backdrop-filter: blur(10px);
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d4d4d4;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.is-chk {
+  text-decoration: line-through;
+  text-decoration-color: #560027;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #560027;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: black;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.btn-add {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 25%;
+  /* border-radius: 100%; */
+  border-color: transparent;
+  background-color: #560027;
+  color: #fff;
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #560027;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+
+details {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+summary {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+details[open] {
+  border: #d4d4d4 solid 1px;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+details[open]>summary {
+  border: #d4d4d4 solid 1px;
+  max-width: 400px;
+  margin: 0 auto 20px;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.sign-in-text {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hr-line {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid black;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.hr-line span {
+  font-size: medium;
+  background: white;
+  padding: 0 10px;
+}
+
+.google-button {
+  display: inline;
+  float: right;
+  /* margin-top: 10px; */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #757575;
+  border-radius: 4px;
+  height: 33px;
+  padding: 0 16px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.google-button:hover {
+  background-color: #f2f2f2;
+}
+
+.google-button img {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+}
+
+.crd{
+  margin: 0 auto;
+  max-width: 500px;
+}
