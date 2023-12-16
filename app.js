@@ -32,17 +32,8 @@ const today = require(__dirname + "/date.js");
 const date = today.day();
 mongoose.set('strictQuery', true);
 
-//Main connection to mongoDB server using Mongoose
-const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect(process.env.MONGO_URL);
-    console.log(`MongoDB Connected: ${conn.connection.host}`);
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-}
-//mongoose.connect(process.env.MONGO_URL);
+//Main connection to mongoDB server
+mongoose.connect(process.env.MONGO_URL);
 
 const itemSchema = new Schema({
     text: String,
@@ -297,10 +288,4 @@ app.post("/chk", (req, res) => {
     };
 });
 
-//app.listen(process.env.PORT || 3000, () => { console.log("server started...") });
-//Connect to the database before listening
-connectDB().then(() => {
-    app.listen(process.env.PORT || 3000, () => {
-        console.log("listening for requests");
-    })
-})
+app.listen(process.env.PORT || 3000, () => { console.log("server started...") });
